@@ -1,13 +1,14 @@
 describe('Thermostat', function() {
   var thermostat;
   beforeEach(function() {
-    thermostat = new Thermostat
+    thermostat = new Thermostat();
+    powerSavingMode = true
   });
 
   describe('Thermostat', function() {
 
     it('starts at 20 degrees', function() {
-      expect(thermostat.start()).toEqual(20)
+      expect(thermostat.temperature).toEqual(20)
     });
 
     it('increases temperature', function() {
@@ -21,5 +22,14 @@ describe('Thermostat', function() {
     it('has a minimum temperature', function() {
       expect(thermostat.minimum()).toEqual(10)
     });
+
+    // it('has a maximum temperature', function() {
+    //   expect(thermostat.maximum()).toEqual(25)
+    // });
+    //
+    // it('changes a maximum temperature', function() {
+    //   powerSavingMode = false
+    //   expect(thermostat.maximum()).toEqual(32)
+    // });
   });
 });
